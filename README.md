@@ -110,7 +110,7 @@ jupyter notebook
 
 ## 👤 Autora
 
-Projeto desenvolvido por Maryllian Vieira como parte do Challenge da Trilha de Especialização em Data Science do Programa ONE: Oracle Next Education em parceria com a Alura.
+Projeto desenvolvido por **Maryllian Vieira** como parte do Challenge da Trilha de Especialização em Data Science do **Programa ONE: Oracle Next Education** em parceria com a **Alura**.
 
 ---
 

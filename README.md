@@ -1,79 +1,119 @@
-# 📉 Telecom X - Análise de Evasão de Clientes
+# 📊 Projeto Churn de Clientes – Telecom X
 
-Este repositório contém uma análise exploratória dos dados de clientes da **Telecom X**, com o objetivo de entender os fatores que levam à evasão (churn). A análise serve como base para a equipe de Data Science desenvolver modelos preditivos e estratégias de retenção.
-
----
-
-## 📌 Descrição do Desafio
-
-A Telecom X enfrenta um alto índice de cancelamentos e precisa identificar os motivos por trás da saída dos clientes. Para isso, foi realizada uma análise baseada em dados reais, com foco em:
-
-- Comportamento dos clientes
-- Serviços contratados
-- Tipos de contratos
-- Cobranças mensais e diárias
-- Correlações com o churn
+Bem-vindo ao projeto de análise de evasão de clientes (Churn) da empresa **Telecom X**. Este repositório contém a análise exploratória realizada sobre os dados de clientes da empresa com o objetivo de entender os principais fatores que contribuem para o cancelamento dos serviços.
 
 ---
 
-## 📁 Estrutura do Projeto
+## 📌 Objetivo
 
-- `telecomX_EDA_melhorado.ipynb`: Notebook principal com todas as etapas de limpeza, transformação e análise dos dados.
-- `README.md`: Arquivo explicativo do projeto.
+A **Telecom X** tem enfrentado um alto índice de cancelamento de clientes. Este projeto tem como objetivo analisar os dados fornecidos pela empresa, tratar as inconsistências e aplicar técnicas de **Análise Exploratória de Dados (EDA)** para extrair insights valiosos sobre o comportamento dos clientes que evadem. 
 
 ---
 
-## ⚙️ Tecnologias e Bibliotecas
+## 🛠️ Tecnologias Utilizadas
 
-- Python 3.x
+- Python 3.10+
 - Pandas
 - NumPy
-- Seaborn
-- Matplotlib
-- Requests
+- Matplotlib & Seaborn
+- Jupyter Notebook
 
 ---
 
-## 🔍 Principais Análises Realizadas
+## 📂 Estrutura do Repositório
 
-- Distribuição de clientes que cancelaram vs. mantiveram o serviço
-- Relação entre **cobrança diária** e churn
-- Impacto da **quantidade de serviços contratados** na evasão
-- Cálculo da **correlação** entre variáveis numéricas e churn
-- Visualizações padronizadas em paleta verde-azulada (`BuGn`)
-
----
-
-## 📊 Principais Insights
-
-- **Clientes com menos serviços contratados** apresentaram maior taxa de churn.
-- **Cobranças diárias mais altas** estão associadas a uma maior chance de evasão.
-- Variáveis como tipo de contrato, suporte técnico e backup online mostram relação significativa com o churn.
+```bash
+├── Challenge_ETL_telecomX.ipynb       # Notebook com o pipeline de ETL e análise exploratória
+├── dataset/                      # Pasta com os dados tratados (se aplicável)
+├── requirements.txt              # Bibliotecas necessárias para rodar o projeto
+└── README.md                     # Este arquivo
+```
 
 ---
 
-## 🚀 Próximos Passos
+## 🔍 Etapas Realizadas
 
-- Construção de modelos preditivos para estimar a probabilidade de churn
-- Criação de dashboards interativos com Streamlit ou Power BI
-- Testes de estratégias de retenção baseadas nos insights extraídos
+### 1. **Importação e Tratamento dos Dados**
+- Extração de dados de uma API em formato JSON.
+- Normalização das colunas e correção de tipos de dados.
+- Preenchimento e tratamento de valores nulos.
+- Criação de novas features, como `Daily_Charges`.
+
+### 2. **Análise Exploratória de Dados (EDA)**
+- Análise da variável alvo `Churn`, que representa se o cliente evadiu ou não.
+- Geração de gráficos para entender o comportamento dos clientes por:
+  - Tipo de contrato
+  - Tempo de permanência (`tenure`)
+  - Serviços contratados
+  - Tipo de pagamento
+  - Fatura diária
+
+### 3. **Análise de Correlação**
+- Verificação da relação entre variáveis e a variável alvo.
+- Criação de mapa de calor e gráficos de dispersão.
 
 ---
 
-## 🧠 Autor
+## 📈 Principais Insights
 
-**Nome:** Maryllian Vieira  
-**LinkedIn:** [[Maryllian Vieira](https://www.linkedin.com/in/maryllian-vieira-dev/)] 
+- Clientes com contratos mensais têm maior chance de evadir.
+- Menor tempo de permanência está fortemente relacionado ao churn.
+- A ausência de serviços como suporte técnico, backup e segurança online está associada ao cancelamento.
+- Clientes com faturas diárias mais altas também demonstram maior churn.
+- Cobrança eletrônica (Paperless Billing) também está relacionada a maior evasão.
 
 ---
 
-## 📌 Observações
+## ✅ Conclusões e Recomendações
 
-Os dados utilizados foram disponibilizados em formato `.json` por meio de uma API pública no GitHub.
+- **Incentivar contratos de longo prazo** com benefícios adicionais.
+- **Oferecer pacotes combinados** de serviços essenciais com desconto.
+- **Foco em retenção nos primeiros meses de uso**, pois o churn ocorre majoritariamente no início do ciclo.
+- **Criar campanhas de reengajamento** para perfis com alto risco de churn.
+
+---
+
+## 💡 Próximos Passos
+
+- Aplicar **modelos preditivos** após balanceamento da variável `Churn`.
+- Explorar técnicas como **SMOTE** e validação cruzada.
+- Construir dashboards interativos para acompanhamento contínuo de churn.
+
+---
+
+## 🚀 Como Executar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/albvieiraa/churn-de-clientes-telecom-x.git
+```
+
+2. Crie um ambiente virtual:
+```bash
+python -m venv venv
+source venv/bin/activate  # Linux/macOS
+venv\Scripts\activate   # Windows
+```
+
+3. Instale as dependências:
+```bash
+pip install -r requirements.txt
+```
+
+4. Execute o notebook:
+```bash
+jupyter notebook
+
+```
+
+---
+
+## 👤 Autora
+
+Projeto desenvolvido por Maryllian Vieira como parte do Challenge da Trilha de Especialização em Data Science do Programa ONE: Oracle Next Education em parceria com a Alura.
 
 ---
 
 ## 📄 Licença
 
-Este projeto está licenciado sob a licença MIT. Sinta-se à vontade para utilizar, modificar e distribuir, com os devidos créditos.
-
+Este projeto está licenciado sob a licença MIT.

@@ -23,10 +23,10 @@ A **Telecom X** tem enfrentado um alto índice de cancelamento de clientes. Este
 ## 📂 Estrutura do Repositório
 
 ```bash
-├── Challenge_ETL_telecomX.ipynb       # Notebook com o pipeline de ETL e análise exploratória
-├── dataset/                      # Pasta com os dados tratados (se aplicável)
-├── requirements.txt              # Bibliotecas necessárias para rodar o projeto
-└── README.md                     # Este arquivo
+├── Challenge_ETL_telecomX.ipynb              # Notebook com o pipeline de ETL e análise exploratória
+├── dataset/telecomx_data_gold.csv            # Pasta com os dados tratados 
+├── requirements.txt                          # Bibliotecas necessárias para rodar o projeto
+└── README.md                                 # Este arquivo
 ```
 
 ---
